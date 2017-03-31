@@ -1,0 +1,26 @@
+{
+  "name": "preact-ts",
+  "version": "1.0.0",
+  "description": "Hello World in Preact with TypeScript taken from https://medium.com/@shakyShane/hello-world-with-preact-jsx-typescript-6d70cf2ebf01",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "preact": "^7.2.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronburrows/preact-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronburrows/preact-ts/issues"
+  },
+  "homepage": "https://github.com/aaronburrows/preact-ts#readme"
+}
