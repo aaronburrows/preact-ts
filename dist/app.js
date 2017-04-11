@@ -566,7 +566,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var preact_1 = __webpack_require__(0);
 var HelloWorld_1 = __webpack_require__(2);
-preact_1.render(preact_1.h(HelloWorld_1.default, { name: "World" }), document.querySelector('#app'));
+preact_1.render(preact_1.h(HelloWorld_1.default, { name: "World" }), document.getElementById('app'));
 
 
 /***/ }),
@@ -590,13 +590,27 @@ var preact_1 = __webpack_require__(0);
 var HelloWorld = (function (_super) {
     __extends(HelloWorld, _super);
     function HelloWorld() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this, HelloWorld.defaultProps) || this;
+        _this.defaultProps = {};
+        _this.state = {
+            iCanCountTo: 6
+        };
+        return _this;
     }
     HelloWorld.prototype.render = function (props) {
-        return preact_1.h("p", null,
-            "Hello ",
-            props.name,
-            "...");
+        var a = 8;
+        return (preact_1.h("div", null,
+            preact_1.h("p", null,
+                "Hello ",
+                props.name,
+                "..."),
+            preact_1.h("p", null,
+                "I can count to ",
+                this.state.iCanCountTo,
+                " !"),
+            preact_1.h("p", null,
+                "My number is: ",
+                a)));
     };
     return HelloWorld;
 }(preact_1.Component));
